@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loja Neon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#120018;
+    color:white;
+}
+
+header{
+    position:sticky;
+    top:0;
+    backdrop-filter:blur(12px);
+    background:rgba(18,0,24,.7);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    background:linear-gradient(90deg,#ff4fd8,#ff7b00);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff4fd8;
+}
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    background:
+    radial-gradient(circle at top,#ff4fd840,transparent 40%),
+    radial-gradient(circle at bottom,#ff7b0040,transparent 45%);
+}
+
+.hero h1{
+    font-size:65px;
+    line-height:1;
+}
+
+.hero span{
+    color:#ff7b00;
+}
+
+.hero p{
+    margin:25px auto;
+    max-width:650px;
+    opacity:.85;
+}
+
+.btn{
+    background:linear-gradient(45deg,#ff4fd8,#ff7b00);
+    border:none;
+    padding:16px 35px;
+    border-radius:50px;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    box-shadow:0 0 30px #ff4fd8;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.produtos{
+    padding:70px 10%;
+}
+
+.titulo{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1b0324;
+    border:2px solid #ff4fd850;
+    border-radius:25px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 35px #ff4fd870;
+}
+
+.img{
+    height:220px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:90px;
+    background:linear-gradient(45deg,#ff4fd8,#ff7b00);
+}
+
+.info{
+    padding:25px;
+}
+
+.info h3{
+    margin-bottom:10px;
+}
+
+.preco{
+    font-size:28px;
+    color:#ff7b00;
+    margin:15px 0;
+    font-weight:bold;
+}
+
+.info button{
+    width:100%;
+}
+
+footer{
+    margin-top:80px;
+    text-align:center;
+    padding:40px;
+    border-top:1px solid #ffffff20;
+    opacity:.7;
+}
+
+.badge{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 18px;
+    border-radius:30px;
+    background:linear-gradient(45deg,#ff4fd8,#ff7b00);
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🔥 Loja Neon
+</div>
+
+<nav>
+<a href="#">Início</a>
+<a href="#">Produtos</a>
+<a href="#">Contato</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>
+O estilo mais
+<span>discretamente chamativo</span>
+do universo.
+</h1>
+
+<p>
+Laranja neon. Rosa choque. Muito brilho.
+Porque vender também pode ter personalidade.
+</p>
+
+<button class="btn">
+Comprar Agora
+</button>
+
+<div class="badge">
+💅🏳️‍🌈 Bem hétero™ 🏳️‍🌈💅
+</div>
+
+</div>
+
+</section>
+
+<section class="produtos">
+
+<h2 class="titulo">
+Produtos em Destaque
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="img">👟</div>
+
+<div class="info">
+<h3>Tênis Neon</h3>
+
+<p>Confortável e impossível passar despercebido.</p>
+
+<div class="preco">
+R$199
+</div>
+
+<button class="btn" onclick="comprar('Tênis Neon')">
+Comprar
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="img">🕶️</div>
+
+<div class="info">
+<h3>Óculos Retrô</h3>
+
+<p>Proteção UV e muito estilo.</p>
+
+<div class="preco">
+R$99
+</div>
+
+<button class="btn" onclick="comprar('Óculos Retrô')">
+Comprar
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="img">🧥</div>
+
+<div class="info">
+<h3>Jaqueta Glow</h3>
+
+<p>Brilha mais que sua autoestima depois do salário.</p>
+
+<div class="preco">
+R$279
+</div>
+
+<button class="btn" onclick="comprar('Jaqueta Glow')">
+Comprar
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>🔥 Loja Neon</h2>
+
+<p>
+Feito com muito rosa choque, laranja neon e bom humor.
+</p>
+
+</footer>
+
+<script>
+function comprar(produto){
+    alert("Você adicionou '" + produto + "' ao carrinho! 🛒");
+}
+</script>
+
+</body>
+</html>
